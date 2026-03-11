@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: phishguard-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: GEMINI_API_KEY
+        value: AIzaSyAaTD84vec-0WaToKPSEKJ0SU35LxYWsVk
