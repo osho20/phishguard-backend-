@@ -14,8 +14,7 @@ import re
 import json
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
-
+CORS(app, origins="*", allow_headers="*", methods=["GET", "POST", "OPTIONS"])
 
 GEMINI_API_KEY = "AIzaSyAaTD84vec-0WaToKPSEKJ0SU35LxYWsVk"
 client = genai.Client(api_key=GEMINI_API_KEY)
