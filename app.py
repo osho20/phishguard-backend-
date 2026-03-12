@@ -14,7 +14,7 @@ import re
 import json
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 
 GEMINI_API_KEY = "AIzaSyAaTD84vec-0WaToKPSEKJ0SU35LxYWsVk"
